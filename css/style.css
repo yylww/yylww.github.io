@@ -174,7 +174,6 @@ div {
     margin: 15px 0 0;
     color: #6E7173;
     float: left;
-    display: inline;
     text-indent: .15em; }
     .post .post-meta:before {
       font-family: "FontAwesome";
@@ -193,7 +192,6 @@ div {
     margin: 15px 0 0;
     color: #6E7173;
     float: right;
-    display: inline;
     text-indent: .15em; }
     .post .ds-thread-count:before {
       font-family: "FontAwesome";
@@ -206,7 +204,6 @@ div {
     margin: 15px 0 0;
     color: #6E7173;
     float: right;
-    display: inline;
     text-indent: .15em; }
     .post .disqus-comment-count:before {
       font-family: "FontAwesome";
@@ -1255,7 +1252,7 @@ figure.highlight,
   white-space: nowrap;
   border-top: 1px solid #eee; }
   .post-nav a {
-    display: inline-block;
+    display: block;
     line-height: 25px;
     font-size: 15px;
     color: #555;
@@ -1354,7 +1351,6 @@ table {
   line-height: 36px; }
 
 .article-share-links {
-  clearfix: none;
   background: #eee; }
 
 .article-share-element, .article-share-twitter, .article-share-facebook, .article-share-weibo, .article-share-qrcode {
