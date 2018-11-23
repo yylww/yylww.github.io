@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>数字滚动动画效果</title>
+</head>
+<body>
+  <div id="box_1"></div>
+  <div id="box_2"></div>
+
+  <script src="./index.js"></script>
+  <script>
+    window.onload = function() {
+      const a = new Animation({
+        el: document.getElementById('box_1'),
+      })
+      const b = new Animation({
+        el: document.getElementById('box_2'),
+        number: 2000,
+        speed: 2000,
+        length: 6,
+        style: {
+          width: '60px',
+          height: '90px',
+          fontSize: '40px',
+          color: 'red',
+          margin: '5px 10px',
+          border: '3px solid red'
+        }
+      })
+
+      a.init()
+      b.init()
+
+      let n = 1234
+      let m = 4321
+      setInterval(() => {
+        n += 1357
+        m += 2468
+        a.setNumber(n)
+        b.setNumber(m)
+      }, 4000)
+    }
+  </script>
+</body>
+</html>
