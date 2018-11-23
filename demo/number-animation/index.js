@@ -5,6 +5,8 @@ function Animation(options) {
   this.speed = options.speed || 1000
   this.length = Math.max(options.length || 0, this.number.toString().length)
   this.style = options.style || { width: '30px', height: '50px', fontSize: '20px' }
+
+  this.init()
 }
 
 Animation.prototype = {
@@ -70,7 +72,12 @@ Animation.prototype = {
       this.prepare()
       this.setStyle()
     }
-    const numberArr = numberStr.split('')
+    const numberArr = numberStr.split('').map(function(value) {
+      if (value === '.') {
+        value = '10'
+      }
+      return value
+    })
     const numberWrapArr = this.element.querySelectorAll('.number-wrap')
     numberWrapArr.forEach(function(value, i) {
       value.style.webkitTransform = 'translateY(-' + numberHeight * parseInt(numberArr[i]) + 'px)'

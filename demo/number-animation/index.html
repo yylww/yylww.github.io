@@ -9,6 +9,7 @@
 <body>
   <div id="box_1"></div>
   <div id="box_2"></div>
+  <div id="box_3"></div>
 
   <script src="./index.js"></script>
   <script>
@@ -30,17 +31,28 @@
           border: '3px solid red'
         }
       })
+      const c = new Animation({
+        el: document.getElementById('box_3'),
+        style: {
+          width: '40px',
+          height: '60px',
+          fontSize: '30px',
+          color: '#22c485',
+          margin: '5px 0',
+          background: '#f2f2f2'
+        }
+      })
 
-      a.init()
-      b.init()
-
-      let n = 1234
-      let m = 4321
+      let x = 1234
+      let y = 4321
+      let z = 56.78
       setInterval(() => {
-        n += 1357
-        m += 2468
-        a.setNumber(n)
-        b.setNumber(m)
+        x += 1357
+        y += 2468
+        z += 11.11
+        a.setNumber(x)
+        b.setNumber(y)
+        c.setNumber(z.toFixed(2))
       }, 4000)
     }
   </script>
